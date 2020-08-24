@@ -12,8 +12,8 @@
 //HAVE TO SPECIFY WHAT IT NEEDS TO CALCULATE
 
 
-let numberone;
-let numbertwo;
+var numberone;
+var numbertwo;
 
 (function() {
     // to get the value of an input: document.getElementById("element-id").value
@@ -48,7 +48,7 @@ let numbertwo;
     });
 })();
 
-//I DONT GET THIS PART YET
+//I DONT GET THIS PART YET - BOOKMARKED
 
 function checkinput(){
     numberone = parseInt(document.getElementById("op-one").value);
