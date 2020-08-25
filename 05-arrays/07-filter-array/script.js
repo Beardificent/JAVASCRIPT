@@ -9,7 +9,7 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     var people = [
         {
@@ -88,7 +88,19 @@
             age: 81,
         },
     ];
-
-    // your code here
+    //created new array
+    let newPeople = [];
+    //function button
+    document.querySelector("button").onclick = function (event) {
+        people.forEach(function (person) {
+            //actual function details
+            if (person.age > 18) {
+                newPeople.push(person);
+            }
+        });//function to display in console
+        newPeople.forEach(function (adults) {
+            console.log(adults);
+        });
+    }
 
 })();
