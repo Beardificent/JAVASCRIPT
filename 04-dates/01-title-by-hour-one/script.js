@@ -21,7 +21,7 @@ let today = new Date().getHours();
 //if hours are
 if (today >= 7 && today <= 18) {
     document.getElementById("target").innerHTML = "Hello"
-} else {
+} else (today <=7 && today >= 18); {
     document.getElementById("target").innerHTML = "Good Evening"
 }
 
