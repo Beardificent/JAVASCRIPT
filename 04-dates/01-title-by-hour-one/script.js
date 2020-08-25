@@ -9,21 +9,18 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-    // your code here
+(function () {
+//create object date - it will start processing as date
+ //   create idea of time (eg hours)
+    var dayt = new Date();
+    var time = dayt.getHours();
 
 
-// define the day
-let today = new Date().getHours();
-
-//if hours are
-if (today >= 7 && today <= 18) {
-    document.getElementById("target").innerHTML = "Hello"
-} else (today <=7 && today >= 18); {
-    document.getElementById("target").innerHTML = "Good Evening"
-}
-
+    if (time < 18) {
+        document.getElementById("target").innerHTML = "Hello";
+    } else {
+        document.getElementById("target").innerHTML = "Good evening";
+    }
 
 })();
