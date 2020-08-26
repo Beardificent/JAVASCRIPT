@@ -23,17 +23,13 @@
 
 })();
 
-/*
-(function() {
+/* SICCOS SOLUTION
+let num = document.getElementById("number").value;
+let res = 1;
 
-    // to get the value of an input: document.getElementById("element-id").value
-
-    document.getElementById("run").addEventListener("click", function() {
-
-        for (let i = input - 1; i >= 1; i--) {
-            input *= i;
-        }
-        alert(input);
-    })
-
-})();*/
+for (i=0; i<num; i++)
+{
+res += res * 1;
+}
+alert(res)
+*/
