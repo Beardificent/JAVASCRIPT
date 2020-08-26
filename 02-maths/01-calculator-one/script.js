@@ -1,5 +1,13 @@
+//first create variables to use
+//link variables to text input html
+//link buttons to functions and give calculations to make
 let one;
 let two;
+
+function checkinput(){
+    one = parseInt(document.getElementById("op-one").value);
+    two = parseInt(document.getElementById("op-two").value);
+}
 
 (function() {
 
@@ -23,7 +31,3 @@ let two;
     });
 })();
 
-function checkinput(){
-    one = parseInt(document.getElementById("op-one").value);
-    two = parseInt(document.getElementById("op-two").value);
-}

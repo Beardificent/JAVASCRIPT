@@ -9,14 +9,21 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-//HAVE TO SPECIFY WHAT IT NEEDS TO CALCULATE
+//create variables to link to textinput html
 
 
-var numberone;
-var numbertwo;
+let numberone;
+let numbertwo;
+
+//don't get the parse int yet, I think it's specifying that and html element needs to be seen as js
+//link variables to text input fields
+function checkinput(){
+    numberone = parseInt(document.getElementById("op-one").value);
+    numbertwo = parseInt(document.getElementById("op-two").value);
+}
 
 (function() {
-    // to get the value of an input: document.getElementById("element-id").value
+    // to get the value of an input: document.getElementById("element-id").value (look for it in html)
 //switch is only needed once and will SWITCH between CASEs until it finds a match.
     var performOperation = function (operation) {
         switch (operation){
@@ -40,17 +47,10 @@ var numbertwo;
                 alert(numberone / numbertwo);
                 break;
         }};
-
+//event listener button, links it to the function
     Array.from(document.querySelectorAll("button.operator")).forEach(function($btn) {
         $btn.addEventListener("click", function() {
             performOperation($btn.id);
         });
     });
 })();
-
-//I DONT GET THIS PART YET - BOOKMARKED
-
-function checkinput(){
-    numberone = parseInt(document.getElementById("op-one").value);
-    numbertwo = parseInt(document.getElementById("op-two").value);
-}

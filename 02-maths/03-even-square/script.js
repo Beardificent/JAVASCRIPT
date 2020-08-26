@@ -12,16 +12,16 @@
 (function() {
 
     document.getElementById("run").addEventListener("click", function() {
-        let l = 1;
-        let r = 21;
-        let arr = [];
-        for (i = l; i <= r; i++) {
+        let a = 1;
+        let b = 21;
+        let c = [];
+        for (i = a; i <= b; i++) {
             if (Math.sqrt(i) == parseInt(Math.sqrt(i)))
-            { arr.push(i);
+            { c.push(i);
             }
 
         }
-        alert(arr);
+        alert(c);
 
     });
 
