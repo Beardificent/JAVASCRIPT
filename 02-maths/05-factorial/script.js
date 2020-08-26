@@ -1,3 +1,4 @@
+
 /* becode/javascript
  *
  * /02-maths/05-factorial/script.js - 2.5: Factorielle
@@ -10,13 +11,29 @@
 // You will have time to focus on it later.
 
 (function() {
-    
-    // to get the value of an input: document.getElementById("element-id").value
+    let  n = document.getElementById("number").value;
 
     document.getElementById("run").addEventListener("click", function() {
-
-        // your code here
+        function factorial(n) {
+            return (n != 1) ? n * factorial(n - 1) : 1;
+        }
+        alert(factorial(n));
 
     });
 
 })();
+
+/*
+(function() {
+
+    // to get the value of an input: document.getElementById("element-id").value
+
+    document.getElementById("run").addEventListener("click", function() {
+
+        for (let i = input - 1; i >= 1; i--) {
+            input *= i;
+        }
+        alert(input);
+    })
+
+})();*/
