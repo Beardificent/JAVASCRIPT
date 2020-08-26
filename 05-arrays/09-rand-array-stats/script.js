@@ -20,7 +20,7 @@
             for (i = 1; i <=10; i++) {
                 document.getElementById("n-"+i).innerHTML = numbers[i-1];
             }
-//establish variables min max
+//establish variables min max sum average and use innerHTML to indicate where they should be displayed
             let min = Math.min(...numbers);
             let max = Math.max(...numbers);
             let sum = numbers.reduce((a, b) => a + b, 0);
