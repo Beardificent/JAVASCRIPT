@@ -13,11 +13,15 @@
 document.getElementById("run").addEventListener("click", function (){
     checkInput();
     if (left.value === right.value) {
-        left.style.backgroundColor = "";
-        right.style.backgroundColor = "";
+        //left.style.backgroundColor = "";
+        //right.style.backgroundColor = "";
+        left.style.border = "";
+        right.style.border = "";
     } else {
-        left.style.backgroundColor = "red";
-        right.style.backgroundColor = "red";
+        //left.style.backgroundColor = "red";
+        //right.style.backgroundColor = "red";
+        left.style.border = "2px dashed red";
+        right.style.border = "2px dashed red";
     }
 })
 
