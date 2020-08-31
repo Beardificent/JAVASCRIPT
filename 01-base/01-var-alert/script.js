@@ -12,7 +12,7 @@
 (function() {
 
     // your code here
-    var message = "Hello, world!";
+    let message = "Hello, world!";
     alert(message);
 
 })();

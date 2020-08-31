@@ -11,7 +11,7 @@
 
 (function() {
 
-var cake = prompt ("Do you want cake?");
+let cake = prompt ("Do you want cake?");
 if (cake === "Yes"){
     alert("Congratulations");
 } else{

@@ -9,19 +9,22 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function question() {
 
-    var name = prompt ("What is your name?", "Bernadette");
-    var gender = prompt ("Are you a boy or  a girl?", "apache helicopter");
-    var hometown = prompt ("Where are you from?", "Johto");
-    alert("name: " + name + ", gender: " + ", hometown: " + hometown);
+    let name = prompt ("What is your name?", "Bernadette");
+    let gender = prompt ("Are you a boy or  a girl?", "apache helicopter");
+    let hometown = prompt ("Where are you from?", "Johto");
+    alert(`Your name is ${name}, you are a ${gender} and you live in ${hometown}.`);
 
     if (confirm("is it correct?")) {}
 
     else{
-        var name = prompt ("What is your name?", "Bernadette");
-        var gender = prompt ("Are you a boy or  a girl?", "apache helicopter");
-        var hometown = prompt ("Where are you from?", "Johto");
+        question();
+        return;
+
+       /* let name = prompt ("What is your name?", "Bernadette");
+        let gender = prompt ("Are you a boy or  a girl?", "apache helicopter");
+        let hometown = prompt ("Where are you from?", "Johto");*/
     }
 
 
