@@ -11,9 +11,26 @@
 //REDO THIS WEEKEND
 //REDO THIS WEEKEND -- STACKOVERFLOW COPY PASTA
 
+//HENDRIKS SOLUTION
+/*(function() {
+    var multTable = {};
+    let scrum = ""
+    for (var v = 1; v < 11; v++) {
+        multTable[v] = {};
+        scrum = scrum + "<tr>";
+        for (var i = 1; i < 11; i++) {
+            multTable[v][i] = i * v;
+            scrum = scrum + "<td>" + multTable[v][i] + "</td>";
+        }scrum = scrum + "</tr>"
+    }
+    document.getElementById("target").innerHTML = "<table id='tbody'>" + scrum + "</table>"
+})();
+*/
+
+
 (function() {
 
-    function tableCreate() {
+    function tableStart() {
         let element = document.getElementById("target");
         let tbl = document.createElement('table');
         tbl.setAttribute("width", "100%")
@@ -36,7 +53,7 @@
         tbl.appendChild(col);
         element.appendChild(tbl)
     }
-    tableCreate();
+    tableStart();
 
 let table = document.getElementsByTagName("table");
     //calculation to go up a cell until 9
