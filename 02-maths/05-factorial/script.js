@@ -15,7 +15,13 @@
 
     document.getElementById("run").addEventListener("click", function() {
         function factorial(n) {
-            return (n != 1) ? n * factorial(n - 1) : 1;
+
+            if (n === 0)
+            {
+                return 1;
+            }
+            return n * factorial(n-1);
+
         }
         alert(factorial(n));
 
@@ -23,13 +29,19 @@
 
 })();
 
-/* SICCOS SOLUTION
-let num = document.getElementById("number").value;
-let res = 1;
 
-for (i=0; i<num; i++)
-{
-res += res * 1;
-}
-alert(res)
-*/
+//OLD SOLUTION
+
+/*
+(function() {
+    let  n = document.getElementById("number").value;
+
+    document.getElementById("run").addEventListener("click", function() {
+        function factorial(n) {
+            return (n != 1) ? n * factorial(n - 1) : 1;
+        }
+        alert(factorial(n));
+
+    });
+
+})();*/
