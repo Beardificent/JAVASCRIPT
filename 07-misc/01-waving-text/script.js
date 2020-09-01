@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-let text = "Woo-hoo! I'm making waves! Wéééé! Oh ... I think I'm having seasickness ..."
+let text = document.getElementById("target").innerText;
 let chars = Array.from(text);
 let wave = "";
 let fsize = [1, 2, 3, 4, 5, 4, 3, 2, 1,]
