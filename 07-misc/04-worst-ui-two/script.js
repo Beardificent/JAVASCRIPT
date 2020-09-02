@@ -22,7 +22,7 @@
     const btnFourMax = btnFour.getAttribute("data-max");
 
     // listen to the first btn click and update the target and its btn value and the data-min as well.
-    btnOne.addEventListener("click", ()=> {
+    btnOne.addEventListener("click", function () {
         if (btnOneMin < btnOneMax) {
             btnOneMin++;
             btnOne.innerHTML = btnOneMin;
@@ -32,7 +32,7 @@
     });
 
     // ""
-    btnTwo.addEventListener("click", ()=> {
+    btnTwo.addEventListener("click", function () {
         if (btnTwoMin < btnTwoMax) {
             btnTwoMin++;
             if (btnTwoMin < 10) {
@@ -44,7 +44,7 @@
     });
 
     // ""
-    btnThree.addEventListener("click", ()=> {
+    btnThree.addEventListener("click", function ()  {
         if (btnThreeMin < btnThreeMax) {
             btnThreeMin++;
             if (btnThreeMin < 10) {
@@ -56,7 +56,7 @@
     });
 
     // ""
-    btnFour.addEventListener("click", ()=> {
+    btnFour.addEventListener("click",function () {
         if (btnFourMin < btnFourMax) {
             btnFourMin++;
             if (btnFourMin < 10) {
