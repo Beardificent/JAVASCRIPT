@@ -11,12 +11,11 @@
 
 (function getPosts () {
 
-    document.getElementById('run').addEventListener("click", ()=> {
+    document.getElementById('run').addEventListener("click", function () {
         window.lib.getPosts((reject, response)=> {
             if (reject) {
-                console.log(1);
+                console.log(reject);
             } else {
-                console.log(null);
                 console.log(response);
             }
         });
