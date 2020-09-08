@@ -11,12 +11,8 @@
 
 
 (() => {
-    let run = document.getElementById('run');
-
-    run.addEventListener("click", function (){
-        async function handleSuccess(resolve) {
-            console.log(resolve);
-        }
-        window.lib.getPosts().then(handleSuccess);
+    document.getElementById("run").addEventListener("click", async () => {
+        await window.lib.getPosts().then(console.log)
     })
 })();
+
