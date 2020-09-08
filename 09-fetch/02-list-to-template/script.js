@@ -18,9 +18,11 @@
 
         fetch("http://localhost:3000/heroes")
             .then(response => response.json())
+            //INSTEAD OF CONSOLE LOG (9.1) we need to attach this data
             .then(data => appendData(data))
+        //create a function in which the data gets styled and attached to target id
         function appendData(data){
-            console.log(data);
+           /* console.log(data);
             let target = document.getElementById('target');
             for (let i = 0; i < data.length; i++){
                 let div = document.createElement("div");
@@ -31,6 +33,17 @@
                     '<p class="powers">' + data[i].powers + '</p>'
                 target.appendChild(div);
             }
+            */
+            let target = document.getElementById('target');
+            for (let i = 0; i < data.length; i++){
+                let tempVar = document.getElementById('tpl-hero').content.cloneNode(true);
+            tempVar.querySelector('.name').innerHTML = data[i].name;
+            tempVar.querySelector('.alter-ego').innerHTML = data[i].alterEgo;
+            tempVar.querySelector('.powers').innerHTML = data[i].abilities;
+            target.appendChild(tempVar);
+            console.log(data);
+            }
+
         }
     })
 })();
