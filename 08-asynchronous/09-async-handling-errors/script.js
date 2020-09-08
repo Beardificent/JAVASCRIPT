@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let run = document.getElementById('run');
+
+    run.addEventListener('click', function (){
+        async function handleSuccess(resolve) {
+            console.log(await resolve);
+        }
+
+        async function handleFailure(reject) {
+            console.error(await reject);
+        }
+        window.lib.getPersons().then(handleSuccess, handleFailure);
+    })
 })();
