@@ -9,6 +9,14 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+
 (() => {
-    // your code here
+    let run = document.getElementById('run');
+
+    run.addEventListener("click", function (){
+        async function handleSuccess(resolve) {
+            console.log(resolve);
+        }
+        window.lib.getPosts().then(handleSuccess);
+    })
 })();
