@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let run = document.getElementById('run');
+
+    run.addEventListener('click', function (){
+        function handleSuccess(resolve) {
+            console.log(resolve);
+        }
+
+        function handleFailure(reject) {
+            console.error(reject);
+        }
+        window.lib.getPosts().then(handleSuccess, handleFailure);
+    })
 })();
