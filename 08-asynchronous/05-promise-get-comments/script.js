@@ -11,7 +11,7 @@
 (() => {
     let run = document.getElementById('run');
 
-    run.addEventListener('click', function (){
+    run.addEventListener('click', function () {
         function handleSuccess(resolve) {
             console.log(resolve);
         }
@@ -19,7 +19,31 @@
         function handleFailure(reject) {
             console.error(reject);
         }
-        window.lib.getPosts().then(handleSuccess, handleFailure);
+
+        window.lib.getComments().then(handleSuccess, handleFailure);
     })
 })();
 
+/*
+let run = document.getElementById("run")
+
+run.addEventListener("click", getPostsWithComments)
+
+function getPostsWithComments() {
+
+    window.lib.getPosts(function (error, posts) {
+
+        posts.forEach(post => {
+            window.lib.getComments(post.id, function (error, comments) {
+
+
+            });
+            console.log(post);
+        });
+
+    });
+}
+
+
+
+ */
