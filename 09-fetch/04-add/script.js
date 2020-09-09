@@ -19,3 +19,6 @@ const userInput = () => {
     console.log(`${nameInput}, ${egoInput}, ${powersInput}`);
 
 
+
+})();
+
