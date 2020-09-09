@@ -11,24 +11,36 @@
 
 (() => {
 
-    //create function for userinput in which we take the value of the input
+    //create function for userInput in which we take the value of the input
 const userInput = () => {
     let nameInput = document.querySelector('#hero-name').value;
     let egoInput = document.querySelector('#hero-alter-ego').value;
     let powersInput = document.querySelector('#hero-powers').value;
     console.log(`${nameInput}, ${egoInput}, ${powersInput}`);
 
+//Split powers to have same format as the rest.
+    let powersArray = powersInput.split(" ");
 
+//create object that will contain userInput
+    let customHero = {};
 
 //FETCH REQUEST
     fetch('http://localhost:3000/heroes')
         .then(respond => {
             return respond.json();
-        }).then(allData => console.log (allData));
+        }).then(allData => {
 
+        //Add the customHero content to object (using .properties from JSON)
+        customHero.id = allData.length+1; // make id one plus the existing length (using ++ will work but will not increment list)
+        customHero.name = nameInput;
+        customHero.alterEgo = egoInput;
+        customHero.abilities = powersArray;
 
-
-}
+        //push (add) customHero to allData
+        allData.push(customHero);
+        console.log(allData);
+    })
+};
     document.getElementById('run').addEventListener('click', userInput);
 })();
 
