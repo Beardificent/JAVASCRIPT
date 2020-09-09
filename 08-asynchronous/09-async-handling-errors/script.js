@@ -14,11 +14,12 @@
 
     run.addEventListener('click', function (){
         async function handleSuccess(resolve) {
-            console.log(await resolve);
+            let result = await window.lib.getPersons();
+            console.log(resolve);
         }
 
         async function handleFailure(reject) {
-            console.error(await reject);
+            console.error(reject);
         }
         window.lib.getPersons().then(handleSuccess, handleFailure);
     })
