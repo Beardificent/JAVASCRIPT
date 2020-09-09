@@ -10,6 +10,8 @@
 // You will have time to focus on it later.
 
 (() => {
+//create object that will contain userInput
+    let customHero = {};
 
     //create function for userInput in which we take the value of the input
 const userInput = () => {
@@ -21,8 +23,7 @@ const userInput = () => {
 //Split powers to have same format as the rest.
     let powersArray = powersInput.split(" ");
 
-//create object that will contain userInput
-    let customHero = {};
+
 
 //FETCH REQUEST
     fetch('http://localhost:3000/heroes')
