@@ -10,5 +10,26 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let spliceHero = () => {
+        let Input = document.querySelector('#hero-id').value;
+
+        //FETCH REQUEST
+        fetch('http://localhost:3000/heroes')
+            .then(respond => {
+                return respond.json();
+            }).then(allData => {
+                //check if input matches any data
+            allData.forEach(data => {
+                //if it matches data, splice (remove) array.
+                if (data.id == Input) {
+                    let index = allData.indexOf(data);
+                    allData.splice(index, 1);
+                    console.log(allData);
+                }
+            });
+        })
+    };
+
+
+        document.querySelector('#run').addEventListener('click', spliceHero)
 })();
