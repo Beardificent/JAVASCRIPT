@@ -10,5 +10,12 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
-})();
+
+    //create function for userinput in which we take the value of the input
+const userInput = () => {
+    let nameInput = document.querySelector('#hero-name').value;
+    let egoInput = document.querySelector('#hero-alter-ego').value;
+    let powersInput = document.querySelector('#hero-powers').value;
+    console.log(`${nameInput}, ${egoInput}, ${powersInput}`);
+
+
