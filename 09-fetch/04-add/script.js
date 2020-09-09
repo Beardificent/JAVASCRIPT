@@ -20,5 +20,15 @@ const userInput = () => {
 
 
 
+//FETCH REQUEST
+    fetch('http://localhost:3000/heroes')
+        .then(respond => {
+            return respond.json();
+        }).then(allData => console.log (allData));
+
+
+
+}
+    document.getElementById('run').addEventListener('click', userInput);
 })();
 
